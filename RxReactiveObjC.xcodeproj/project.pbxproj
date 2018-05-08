@@ -1,0 +1,398 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		78BF7AF220A1838F00653C0C /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BF7AF120A1838F00653C0C /* Dummy.swift */; };
+		C0595B08F336FAD8B31C609F /* Pods_Common_iOS_RxReactiveObjCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A58971854393D5EBE776D226 /* Pods_Common_iOS_RxReactiveObjCTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		26FBB545395E6A3FE0CA3006 /* Pods_Common_iOS_RxReactiveObjCSampleObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Common_iOS_RxReactiveObjCSampleObjC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A1E7D1BB9071D3D81D356C2 /* Pods-Common-iOS-RxReactiveObjCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common-iOS-RxReactiveObjCTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Common-iOS-RxReactiveObjCTests/Pods-Common-iOS-RxReactiveObjCTests.release.xcconfig"; sourceTree = "<group>"; };
+		6991033338B8403A373AA659 /* Pods-Common-iOS-RxReactiveObjCTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common-iOS-RxReactiveObjCTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Common-iOS-RxReactiveObjCTests/Pods-Common-iOS-RxReactiveObjCTests.debug.xcconfig"; sourceTree = "<group>"; };
+		78BF7AEF20A1838F00653C0C /* RxReactiveObjCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxReactiveObjCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		78BF7AF120A1838F00653C0C /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
+		78BF7AF320A1838F00653C0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A58971854393D5EBE776D226 /* Pods_Common_iOS_RxReactiveObjCTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Common_iOS_RxReactiveObjCTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A59DEBC3482A099F30BE3DAF /* Pods_Common_iOS_RxReactiveObjCSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Common_iOS_RxReactiveObjCSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE91D1C717F44383B2CAA076F59052A1 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		78BF7AEC20A1838F00653C0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0595B08F336FAD8B31C609F /* Pods_Common_iOS_RxReactiveObjCTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		78BF7AF020A1838F00653C0C /* RxReactiveObjCTests */ = {
+			isa = PBXGroup;
+			children = (
+				78BF7AF120A1838F00653C0C /* Dummy.swift */,
+				78BF7AF320A1838F00653C0C /* Info.plist */,
+			);
+			path = RxReactiveObjCTests;
+			sourceTree = "<group>";
+		};
+		B2A4ABD36C0F81E58D24460DF896DEEE = {
+			isa = PBXGroup;
+			children = (
+				78BF7AF020A1838F00653C0C /* RxReactiveObjCTests */,
+				BBAEE1D991FF80A39CCE7E7403152341 /* Products */,
+				EE91D1C717F44383B2CAA076F59052A1 /* Base.xcconfig */,
+				B2B32FE211DC0101B98924E4 /* Pods */,
+				C8A108E4C6F2F4BC45083967 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B2B32FE211DC0101B98924E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6991033338B8403A373AA659 /* Pods-Common-iOS-RxReactiveObjCTests.debug.xcconfig */,
+				5A1E7D1BB9071D3D81D356C2 /* Pods-Common-iOS-RxReactiveObjCTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BBAEE1D991FF80A39CCE7E7403152341 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78BF7AEF20A1838F00653C0C /* RxReactiveObjCTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C8A108E4C6F2F4BC45083967 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A59DEBC3482A099F30BE3DAF /* Pods_Common_iOS_RxReactiveObjCSample.framework */,
+				26FBB545395E6A3FE0CA3006 /* Pods_Common_iOS_RxReactiveObjCSampleObjC.framework */,
+				A58971854393D5EBE776D226 /* Pods_Common_iOS_RxReactiveObjCTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		78BF7AEE20A1838F00653C0C /* RxReactiveObjCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78BF7AF620A1838F00653C0C /* Build configuration list for PBXNativeTarget "RxReactiveObjCTests" */;
+			buildPhases = (
+				F4DEB6721A17A273CF34DCC1 /* [CP] Check Pods Manifest.lock */,
+				78BF7AEB20A1838F00653C0C /* Sources */,
+				78BF7AEC20A1838F00653C0C /* Frameworks */,
+				78BF7AED20A1838F00653C0C /* Resources */,
+				0D8F77557F75338A2E198CD8 /* [CP] Embed Pods Frameworks */,
+				010C68AF536C8202979F3883 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RxReactiveObjCTests;
+			productName = RxReactiveObjCTests;
+			productReference = 78BF7AEF20A1838F00653C0C /* RxReactiveObjCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7984DA31AAF87636ABF70713B1014203 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0830;
+				TargetAttributes = {
+					78BF7AEE20A1838F00653C0C = {
+						CreatedOnToolsVersion = 9.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D1103ABE4B1FF0C3EB0084E14F4971B3 /* Build configuration list for PBXProject "RxReactiveObjC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B2A4ABD36C0F81E58D24460DF896DEEE;
+			productRefGroup = BBAEE1D991FF80A39CCE7E7403152341 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				78BF7AEE20A1838F00653C0C /* RxReactiveObjCTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		78BF7AED20A1838F00653C0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		010C68AF536C8202979F3883 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Common-iOS-RxReactiveObjCTests/Pods-Common-iOS-RxReactiveObjCTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0D8F77557F75338A2E198CD8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Common-iOS-RxReactiveObjCTests/Pods-Common-iOS-RxReactiveObjCTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/RxReactiveObjC/RxReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Common-iOS-RxReactiveObjCTests/Pods-Common-iOS-RxReactiveObjCTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4DEB6721A17A273CF34DCC1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Common-iOS-RxReactiveObjCTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		78BF7AEB20A1838F00653C0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78BF7AF220A1838F00653C0C /* Dummy.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4EA6839BF9331E24EE8782E692726F59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE91D1C717F44383B2CAA076F59052A1 /* Base.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		78BF7AF420A1838F00653C0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6991033338B8403A373AA659 /* Pods-Common-iOS-RxReactiveObjCTests.debug.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = RxReactiveObjCTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.RxReactiveObjC.RxReactiveObjCTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		78BF7AF520A1838F00653C0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A1E7D1BB9071D3D81D356C2 /* Pods-Common-iOS-RxReactiveObjCTests.release.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = RxReactiveObjCTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.RxReactiveObjC.RxReactiveObjCTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7A33ACE22C2C9A270371E9EB71D3F72B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE91D1C717F44383B2CAA076F59052A1 /* Base.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		78BF7AF620A1838F00653C0C /* Build configuration list for PBXNativeTarget "RxReactiveObjCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78BF7AF420A1838F00653C0C /* Debug */,
+				78BF7AF520A1838F00653C0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1103ABE4B1FF0C3EB0084E14F4971B3 /* Build configuration list for PBXProject "RxReactiveObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A33ACE22C2C9A270371E9EB71D3F72B /* Debug */,
+				4EA6839BF9331E24EE8782E692726F59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7984DA31AAF87636ABF70713B1014203 /* Project object */;
+}
