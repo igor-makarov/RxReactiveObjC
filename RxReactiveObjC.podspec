@@ -21,12 +21,10 @@ Pod::Spec.new do |s|
   # todo remove:
   s.ios.deployment_target = '9.0'
   s.osx.deployment_target = '10.12'
-  s.source_files = 'Sources/RxReactiveObjC/**/*.swift'
+  s.source_files = 'Sources/**/*.swift'
   s.dependency 'RxSwift', '>=4.0.0'
   s.dependency 'ReactiveObjC', '>=3.1.0'
   s.test_spec 'Tests' do |sp|
-      sp.dependency 'RxSwift', '>=4.0.0'
-      sp.dependency 'ReactiveObjC', '>=3.1.0'
-      sp.source_files = 'Tests/RxReactiveObjCTests/**/*.swift'
+    sp.source_files = 'Tests/**/*.swift'
   end
 end

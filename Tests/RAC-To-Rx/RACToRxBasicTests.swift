@@ -91,7 +91,7 @@ class RACToRxBasicTests: XCTestCase {
                 dispose.fulfill()
             })
         }
-        _ = Observable.from(signal)
+        Observable.from(signal)
             .subscribe { _ in }
             .disposed(by: disposeBag)
         wait(for: [dispose], timeout: 1)
@@ -106,7 +106,7 @@ class RACToRxBasicTests: XCTestCase {
                 dispose.fulfill()
             })
         }
-        _ = Observable.from(signal)
+        Observable.from(signal)
             .subscribe { _ in }
             .disposed(by: disposeBag)
         wait(for: [dispose], timeout: 3)
