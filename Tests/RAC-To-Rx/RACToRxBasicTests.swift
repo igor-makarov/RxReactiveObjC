@@ -28,7 +28,7 @@ class RACToRxBasicTests: XCTestCase {
                 }
                 let values = expectation(description: "value")
                 values.expectedFulfillmentCount = count
-                Observable.from(signal)
+                Observable.from(signal: signal)
                     .subscribe(onNext: { str in
                         XCTAssertNotNil(str)
                         values.fulfill()
@@ -45,7 +45,7 @@ class RACToRxBasicTests: XCTestCase {
             return RACDisposable()
         }
         let completion = expectation(description: "completion")
-        Observable.from(signal)
+        Observable.from(signal: signal)
             .subscribe(onCompleted: { completion.fulfill() })
             .disposed(by: disposeBag)
         wait(for: [completion], timeout: 2)
@@ -59,7 +59,7 @@ class RACToRxBasicTests: XCTestCase {
         let completion = expectation(description: "completion")
         let errored = expectation(description: "errored")
         errored.isInverted = true
-        Observable.from(signal)
+        Observable.from(signal: signal)
             .subscribe(onError: { _ in errored.fulfill() },
                        onCompleted: { completion.fulfill() })
             .disposed(by: disposeBag)
@@ -73,7 +73,7 @@ class RACToRxBasicTests: XCTestCase {
         }
         
         let errored = expectation(description: "errored")
-        Observable.from(signal)
+        Observable.from(signal: signal)
             .subscribe(onError: { error in
                 XCTAssertEqual(error as NSError, NSError(domain: "Error", code: 2, userInfo: nil))
                 errored.fulfill()
@@ -91,7 +91,7 @@ class RACToRxBasicTests: XCTestCase {
                 dispose.fulfill()
             })
         }
-        Observable.from(signal)
+        Observable.from(signal: signal)
             .subscribe { _ in }
             .disposed(by: disposeBag)
         wait(for: [dispose], timeout: 1)
@@ -106,7 +106,7 @@ class RACToRxBasicTests: XCTestCase {
                 dispose.fulfill()
             })
         }
-        Observable.from(signal)
+        Observable.from(signal: signal)
             .subscribe { _ in }
             .disposed(by: disposeBag)
         wait(for: [dispose], timeout: 3)

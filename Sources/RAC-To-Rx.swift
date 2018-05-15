@@ -7,7 +7,9 @@ import ReactiveObjC
 import RxSwift
 
 public extension Observable where E: AnyObject {
-    public static func from(_ signal: RACSignal<E>) -> Observable<E?> {
+    public static func from(signal: RACSignal<E>?) -> Observable<E?> {
+        guard let signal = signal else { return .empty() }
+        
         return Observable<E?>.create { o in
             let subscription = signal.subscribeNext({ v in
                 o.onNext(v)
