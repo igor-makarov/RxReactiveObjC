@@ -20,7 +20,9 @@ Pod::Spec.new do |s|
 
   # todo remove:
   s.ios.deployment_target = '9.0'
-  s.osx.deployment_target = '10.12'
+  s.watchos.deployment_target = '2.0'
+  s.osx.deployment_target = '10.10'
+  
   s.source_files = 'Sources/**/*.swift'
   s.dependency 'RxSwift', '>=4.0.0'
   s.dependency 'ReactiveObjC', '>=3.1.0'
