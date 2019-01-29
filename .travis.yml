@@ -1,3 +1,7 @@
+os: osx
+language: objective-c
+osx_image: xcode10.1
+
 before_script:
   - mkdir -p build
   - swift --version
@@ -6,11 +10,3 @@ script:
   - Scripts/ci_phases/01_lint_project.sh
   - travis_retry Scripts/ci_phases/02_run_tests_ios.sh
   - bundle exec pod lib lint --skip-tests --allow-warnings
-
-matrix:
-  include:
-    - os: osx
-      language: objective-c
-      osx_image: xcode9.3
-      env:
-        - SWIFT_VERSION=4
