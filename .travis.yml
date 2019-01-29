@@ -5,7 +5,7 @@ osx_image: xcode10.1
 env: 
   - JOB=LINT
   - JOB=TEST
-  - JOB=POD_LINT
+  # - JOB=POD_LINT
 
 before_script:
   - mkdir -p build
@@ -14,4 +14,4 @@ before_script:
 script:
   - if [ "$JOB" == "LINT" ]; then Scripts/ci_phases/01_lint_project.sh; fi
   - if [ "$JOB" == "TEST" ]; then travis_retry Scripts/ci_phases/02_run_tests_ios.sh; fi
-  - if [ "$JOB" == "POD_LINT" ]; then bundle exec pod lib lint --skip-tests --allow-warnings; fi
+  # - if [ "$JOB" == "POD_LINT" ]; then bundle exec pod lib lint --skip-tests --allow-warnings; fi
