@@ -17,17 +17,18 @@ Pod::Spec.new do |s|
   s.source       = { git: 'https://github.com/igor-makarov/RxReactiveObjC.git',
                      tag: s.version.to_s }
 
+  s.platform = :ios, :osx, :watchos
+  s.ios.deployment_target = '9.0'
+  s.watchos.deployment_target = '2.0'
+  s.osx.deployment_target = '10.10'
+
   s.subspec 'Core' do |sp|
-    sp.platform = :ios, :osx, :watchos
-    sp.ios.deployment_target = '9.0'
-    sp.watchos.deployment_target = '2.0'
-    sp.osx.deployment_target = '10.10'
 
     sp.source_files = 'Sources/Core/**/*.swift'
   end
 
   s.subspec 'DataSource' do |sp|
-    sp.platform = :ios, '9.0'
+    sp.platform = :ios
 
     sp.source_files = 'Sources/DataSource/**/*.swift'
 
