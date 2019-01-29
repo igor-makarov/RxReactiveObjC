@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
     sp.source_files = 'Sources/Core/**/*.swift'
   end
 
-  s.subspec 'RxDataSources' do |sp|
+  s.subspec 'DataSource' do |sp|
     sp.platform = :ios, '9.0'
 
     sp.source_files = 'Sources/DataSource/**/*.swift'
@@ -34,7 +34,8 @@ Pod::Spec.new do |s|
     sp.dependency 'RxDataSources'
   end
 
-  s.test_spec 'Tests' do |sp|
+  s.test_spec 'CoreTests' do |sp|
+    sp.dependency 'RxReactiveObjC/Core'
     sp.source_files = 'Tests/**/*.swift'
   end
 

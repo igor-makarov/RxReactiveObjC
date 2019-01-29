@@ -14,20 +14,6 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "78BF7AEE20A1838F00653C0C"
-               BuildableName = "RxReactiveObjCTests.xctest"
-               BlueprintName = "RxReactiveObjCTests"
-               ReferencedContainer = "container:RxReactiveObjC.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "000000003D50"
                BuildableName = "RxReactiveObjC-Unit-Tests.xctest"
                BlueprintName = "RxReactiveObjC-Unit-Tests"
@@ -56,10 +42,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "78BF7AEE20A1838F00653C0C"
-            BuildableName = "RxReactiveObjCTests.xctest"
-            BlueprintName = "RxReactiveObjCTests"
-            ReferencedContainer = "container:RxReactiveObjC.xcodeproj">
+            BlueprintIdentifier = "000000004C80"
+            BuildableName = "RxReactiveObjC.root-Core-DataSource-Unit-Tests.xctest"
+            BlueprintName = "RxReactiveObjC.root-Core-DataSource-Unit-Tests"
+            ReferencedContainer = "container:Pods/Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -75,15 +61,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "78BF7AEE20A1838F00653C0C"
-            BuildableName = "RxReactiveObjCTests.xctest"
-            BlueprintName = "RxReactiveObjCTests"
-            ReferencedContainer = "container:RxReactiveObjC.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

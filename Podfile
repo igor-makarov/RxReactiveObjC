@@ -10,10 +10,9 @@ project 'RxReactiveObjC.xcodeproj'
 abstract_target 'Common' do
   pod 'RxSwift'
   pod 'ReactiveObjC'
-  pod 'RxReactiveObjC', path: './', testspecs: ['Tests'], inhibit_warnings: false
-  abstract_target 'iOS' do
+  pod 'RxReactiveObjC', path: './', testspecs: ['CoreTests'], inhibit_warnings: false
+  target 'RxReactiveObjCTests' do
     platform :ios, '9.0'
     pod 'SwiftLint'
-    target 'RxReactiveObjCTests'
   end
 end
