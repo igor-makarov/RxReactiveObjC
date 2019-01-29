@@ -18,12 +18,21 @@ Pod::Spec.new do |s|
   s.source       = { :git => 'https://github.com/igor-makarov/RxReactiveObjC.git', 
                      :tag => "#{s.version}" }
 
-  # todo remove:
-  s.ios.deployment_target = '9.0'
-  s.watchos.deployment_target = '2.0'
-  s.osx.deployment_target = '10.10'
   
-  s.source_files = 'Sources/**/*.swift'
+  s.subspec 'Core' do |s|
+    s.ios.deployment_target = '9.0'
+    s.watchos.deployment_target = '2.0'
+    s.osx.deployment_target = '10.10'
+    
+    s.source_files = 'Sources/Core/**/*.swift'
+  end
+
+  s.subspec 'RxDataSources' do |s|
+    s.ios.deployment_target = '9.0'
+    s.source_files = 'Sources/DataSource/**/*.swift'
+    s.dependency 'RxDataSources'
+  end
+
   s.dependency 'RxSwift', '>=4.0.0'
   s.dependency 'ReactiveObjC', '>=3.1.0'
   s.test_spec 'Tests' do |sp|
