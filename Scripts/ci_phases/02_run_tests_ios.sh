@@ -6,6 +6,5 @@ xcodebuild test \
     -sdk iphonesimulator \
     -configuration Debug \
     -destination 'platform=iOS Simulator,name=iPhone 8,OS=latest' \
-    CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY= PROVISIONING_PROFILE= \
 | tee build/tests_ios.txt \
 | xcpretty
