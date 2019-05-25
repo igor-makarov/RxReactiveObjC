@@ -154,14 +154,14 @@ public final class RxTableViewSectionedReloadDataSourceObjC: NSObject {
     }
 
     @objc(sectionAtIndex:)
-    func section(at index: Int) -> NSObject? {
+    public func section(at index: Int) -> NSObject? {
         guard let sectionedValues = sectionedValues else { return nil }
         guard sectionedValues.count > index else { return nil }
         return sectionedValues[index].section
     }
 
     @objc(valueAtIndexPath:)
-    func value(at indexPath: IndexPath) -> NSObject? {
+    public func value(at indexPath: IndexPath) -> NSObject? {
         guard indexPath.indices.count > 1 else { return nil }
         guard let sectionedValues = sectionedValues else { return nil }
         guard sectionedValues.count > indexPath.section else { return nil }
