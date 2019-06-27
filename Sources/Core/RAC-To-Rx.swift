@@ -6,11 +6,11 @@
 import ReactiveObjC
 import RxSwift
 
-public extension Observable where E: AnyObject {
-    static func from(signal: RACSignal<E>?) -> Observable<E?> {
+public extension Observable where Element: AnyObject {
+    static func from(signal: RACSignal<Element>?) -> Observable<Element?> {
         guard let signal = signal else { return .empty() }
         
-        return Observable<E?>.create { o in
+        return Observable<Element?>.create { o in
             let subscription = signal.subscribeNext({ v in
                 o.onNext(v)
             }, error: { e in
@@ -24,7 +24,7 @@ public extension Observable where E: AnyObject {
 }
 
 public extension ObservableType {
-    func rxrac_nonNilValues<T>() -> Observable<T> where E == T? {
+    func rxrac_nonNilValues<T>() -> Observable<T> where Element == T? {
         // swiftlint:disable:next force_unwrapping
         return self.filter { $0 != nil }.map { $0! }
     }
