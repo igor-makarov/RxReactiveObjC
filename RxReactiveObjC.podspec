@@ -18,6 +18,7 @@ Pod::Spec.new do |s|
                      tag: s.version.to_s }
 
   s.platform = :ios, :osx, :watchos
+  s.swift_versions = %w[5.0 5.1]
   s.ios.deployment_target = '9.0'
   s.watchos.deployment_target = '2.0'
   s.osx.deployment_target = '10.10'
