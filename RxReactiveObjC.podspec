@@ -23,15 +23,18 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = '10.10'
 
   s.subspec 'Core' do |sp|
-
     sp.source_files = 'Sources/Core/**/*.swift'
+  end
+
+  s.subspec 'MapKit' do |sp|
+    sp.platform = :ios
+    sp.source_files = 'Sources/MapKit/**/*.swift'
+    sp.dependency 'RxMKMapView'
   end
 
   s.subspec 'DataSource' do |sp|
     sp.platform = :ios
-
     sp.source_files = 'Sources/DataSource/**/*.swift'
-
     sp.dependency 'RxDataSources'
   end
 
@@ -40,6 +43,6 @@ Pod::Spec.new do |s|
     sp.source_files = 'Tests/**/*.swift'
   end
 
-  s.dependency 'RxSwift', '>=4.0.0'
+  s.dependency 'RxSwift', '~> 5'
   s.dependency 'ReactiveObjC', '>=3.1.0'
 end
