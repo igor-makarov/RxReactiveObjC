@@ -30,12 +30,14 @@ Pod::Spec.new do |s|
   s.subspec 'MapKit' do |sp|
     sp.platform = :ios
     sp.source_files = 'Sources/MapKit/**/*.swift'
+    sp.dependency 'RxReactiveObjC/Core'
     sp.dependency 'RxMKMapView'
   end
 
   s.subspec 'DataSource' do |sp|
     sp.platform = :ios
     sp.source_files = 'Sources/DataSource/**/*.swift'
+    sp.dependency 'RxReactiveObjC/Core'
     sp.dependency 'RxDataSources'
   end
 
