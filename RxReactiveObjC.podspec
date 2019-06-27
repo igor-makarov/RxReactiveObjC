@@ -40,6 +40,10 @@ Pod::Spec.new do |s|
   end
 
   s.test_spec 'CoreTests' do |sp|
+    sp.platform = :ios, :osx
+    sp.ios.deployment_target = '9.0'
+    sp.osx.deployment_target = '10.10'
+
     sp.dependency 'RxReactiveObjC/Core'
     sp.source_files = 'Tests/**/*.swift'
   end
