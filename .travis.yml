@@ -16,4 +16,4 @@ before_script:
 script:
   - if [ "$JOB" == "LINT" ]; then Scripts/ci_phases/01_lint_project.sh; fi
   - if [ "$JOB" == "TEST" ]; then travis_retry Scripts/ci_phases/02_run_tests_ios.sh; fi
-  - if [ "$JOB" == "POD_LINT" ]; then bundle exec pod lib lint --platforms=$PLATFORM --sources=https://cdn.cocoapods.org/ --no-subspecs --verbose ; fi
+  - if [ "$JOB" == "POD_LINT" ]; then bundle exec pod lib lint --platforms=$PLATFORM --sources=https://cdn.cocoapods.org/ --no-subspecs ; fi
