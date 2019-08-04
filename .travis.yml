@@ -2,6 +2,11 @@ os: osx
 language: objective-c
 osx_image: xcode10.2
 
+matrix:
+  include:
+  - osx_image: xcode11
+    env: JOB=TEST
+
 env: 
   - JOB=LINT
   - JOB=TEST
