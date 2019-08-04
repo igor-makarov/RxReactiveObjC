@@ -1,0 +1,6 @@
+framework module RxReactiveObjC {
+  umbrella header "RxReactiveObjC-umbrella.h"
+
+  export *
+  module * { export * }
+}
