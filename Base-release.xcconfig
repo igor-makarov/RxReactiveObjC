@@ -1,0 +1,2 @@
+#include "Swift-version.xcconfig"
+#include "Pods/Target Support Files/Pods-Common-RxReactiveObjCSample/Pods-Common-RxReactiveObjCSample.release.xcconfig"
