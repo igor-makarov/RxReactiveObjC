@@ -26,6 +26,6 @@ script:
   - |
     if [ "$JOB" == "POD_LINT" ]; then 
       ( while : ; do date; sleep 300; done )&
-      bundle exec pod lib lint --platforms=$PLATFORM --sources=https://cdn.cocoapods.org/ --no-subspecs
+      bundle exec pod lib lint --platforms=$PLATFORM --no-subspecs
     fi
   - if [ "$JOB" == "SWIFT_COMPAT" ]; then travis_retry Scripts/ci_phases/run_tests_swift_compat.sh; fi

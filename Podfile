@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
 
-source 'https://cdn.cocoapods.org/'
-
 install! 'cocoapods', deterministic_uuids: false
 use_frameworks!
 inhibit_all_warnings!
