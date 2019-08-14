@@ -6,6 +6,8 @@ matrix:
   include:
   - osx_image: xcode11
     env: JOB=TEST
+  - osx_image: xcode10.2
+    env: JOB=SWIFT_COMPAT
 
 env: 
   - JOB=LINT
@@ -26,3 +28,4 @@ script:
       ( while : ; do date; sleep 300; done )&
       bundle exec pod lib lint --platforms=$PLATFORM --sources=https://cdn.cocoapods.org/ --no-subspecs
     fi
+  - if [ "$JOB" == "SWIFT_COMPAT" ]; then travis_retry Scripts/ci_phases/run_tests_swift_compat.sh; fi
