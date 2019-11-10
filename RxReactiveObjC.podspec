@@ -1,9 +1,16 @@
 #!/usr/bin/env ruby
 filename = File.basename(__FILE__, '.podspec')
+def self.infer_version_from_git
+  return nil unless Dir.exist?('.git')
+
+  `git tag --merged HEAD --sort=committerdate`.split.select do |tag|
+    Version.correct?(tag)
+  end.last
+end
 
 Pod::Spec.new do |s|
   s.name         = filename
-  s.version      = '1.0.0'
+  s.version      = infer_version_from_git || (raise Informative, 'Could not infer `llbuild` version from git')
   s.summary      = 'Bridge between RxSwift and ReactiveObjC'
 
   s.description  = <<-DESC
