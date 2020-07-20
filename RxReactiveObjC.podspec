@@ -10,7 +10,7 @@ end
 
 Pod::Spec.new do |s|
   s.name         = filename
-  s.version      = infer_version_from_git || (raise Informative, 'Could not infer `llbuild` version from git')
+  s.version      = infer_version_from_git || (raise Informative, 'Could not infer version from git')
   s.summary      = 'Bridge between RxSwift and ReactiveObjC'
 
   s.description  = <<-DESC
