@@ -1,4 +1,5 @@
-#!/bin/sh -l +o xtrace
+#!/bin/sh
+mkdir -p build || true
 set -o pipefail && \
 xcodebuild test \
     -workspace RxReactiveObjC.xcworkspace \
@@ -7,4 +8,4 @@ xcodebuild test \
     -configuration Debug \
     -destination 'platform=iOS Simulator,name=iPhone 8,OS=latest' \
 | tee build/tests_ios.txt \
-| xcpretty
+| bundle exec xcpretty
