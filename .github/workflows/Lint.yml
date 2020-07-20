@@ -1,0 +1,29 @@
+name: Lint
+
+jobs:
+  lint:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.6
+    - name: bundle install
+      run: |
+        bundle install --jobs=3
+    - name: pod install
+      run: |
+        bundle exec pod install
+
+    - name: Lint
+      run: |
+        Scripts/ci_phases/01_lint_project.sh
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
