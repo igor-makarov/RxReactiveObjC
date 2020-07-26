@@ -47,3 +47,11 @@ npm-debug.log
 
 # fastlane
 fastlane/README.md
+
+
+# SwiftPM
+.DS_Store
+/.build
+/Packages
+xcuserdata/
+Package.resolved
