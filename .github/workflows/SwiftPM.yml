@@ -1,0 +1,48 @@
+name: SwiftPM
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        test-command: [swiftpm, xc-macos, xc-ios]
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: setup-xcode
+      uses: maxim-lobanov/setup-xcode@1.0
+      with:
+        xcode-version: 11.5
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.6
+    - name: Bundler Cache
+      uses: actions/cache@v2
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gems-
+    - name: bundle install
+      run: |
+        bundle config path vendor/bundle
+        bundle install --jobs 4 --retry 3
+
+    - name: Test
+      run: |
+        export TEST_COMMAND="${{ matrix.test-command }}"
+        Scripts/ci_phases/03_run_tests_package.sh
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  schedule:
+    - cron:  '0 9 * * 0,1,2,3,4'
+      branches:
+      - main
