@@ -19,23 +19,21 @@ class RACToRxBasicTests: XCTestCase {
     
     func test_Next() {
         for count in [1, 2, 10] {
-            XCTContext.runActivity(named: "\(count) values") { _ in
-                let signal = RACSignal<NSString>.createSignal {
-                    for i in 0..<count {
-                        $0.sendNext("\(i)")
-                    }
-                    return RACDisposable()
+            let signal = RACSignal<NSString>.createSignal {
+                for i in 0..<count {
+                    $0.sendNext("\(i)")
                 }
-                let values = expectation(description: "value")
-                values.expectedFulfillmentCount = count
-                Observable.from(signal: signal)
-                    .subscribe(onNext: { str in
-                        XCTAssertNotNil(str)
-                        values.fulfill()
-                    })
-                    .disposed(by: disposeBag)
-                wait(for: [values], timeout: 2)
+                return RACDisposable()
             }
+            let values = expectation(description: "value")
+            values.expectedFulfillmentCount = count
+            Observable.from(signal: signal)
+                .subscribe(onNext: { str in
+                    XCTAssertNotNil(str)
+                    values.fulfill()
+                })
+                .disposed(by: disposeBag)
+            wait(for: [values], timeout: 2)
         }
     }
     

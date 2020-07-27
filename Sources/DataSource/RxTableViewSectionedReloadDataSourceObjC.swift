@@ -1,5 +1,7 @@
 //
 
+#if os(iOS)
+
 import UIKit
 import RxSwift
 import RxCocoa
@@ -169,3 +171,5 @@ public final class RxTableViewSectionedReloadDataSourceObjC: NSObject {
         return sectionedValues[indexPath.section].values[indexPath.row]
     }
 }
+
+#endif

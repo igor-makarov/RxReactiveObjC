@@ -1,3 +1,7 @@
+//
+
+#if os(iOS) && canImport(RxMKMapView)
+
 import MapKit
 import RxMKMapView
 import ReactiveObjC
@@ -16,3 +20,5 @@ public extension MKMapView {
         return RXRACDisposable(rx.overlays(observable))
     }
 }
+
+#endif

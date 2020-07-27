@@ -23,16 +23,14 @@ class RxToRACBasicTests: XCTestCase {
     
     func test_Next() {
         for count in [1, 2, 10] {
-            XCTContext.runActivity(named: "\(count) values") { _ in
-                let observable = Observable.from(Array(0..<count)).map { "\($0)" as NSString }
-                let values = expectation(description: "value")
-                values.expectedFulfillmentCount = count
-
-                disposable = observable.asSignal()
-                    .subscribeNext { _ in values.fulfill() }
-                    .asScopedDisposable()
-                wait(for: [values], timeout: 2)
-            }
+            let observable = Observable.from(Array(0..<count)).map { "\($0)" as NSString }
+            let values = expectation(description: "value")
+            values.expectedFulfillmentCount = count
+            
+            disposable = observable.asSignal()
+                .subscribeNext { _ in values.fulfill() }
+                .asScopedDisposable()
+            wait(for: [values], timeout: 2)
         }
     }
     
