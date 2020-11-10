@@ -2,6 +2,8 @@ name: Build
 
 jobs:
   xcode:
+    strategy:
+      fail-fast: false
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
@@ -15,13 +17,14 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: 2.6
+    - run: echo "ImageVersion=$ImageVersion" >> $GITHUB_ENV
     - name: Bundler Cache
       uses: actions/cache@v2
       with:
         path: vendor/bundle
-        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+        key: ${{ runner.os }}-${{ env.ImageVersion }}-gems-${{ hashFiles('**/Gemfile.lock') }}
         restore-keys: |
-          ${{ runner.os }}-gems-
+          ${{ runner.os }}-${{ env.ImageVersion }}-gems-
     - name: bundle install
       run: |
         bundle config path vendor/bundle
