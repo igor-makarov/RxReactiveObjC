@@ -21,6 +21,21 @@ public extension Observable where Element: AnyObject {
     }
 }
 
+public extension Observable {
+      func asSignal<T: AnyObject>() -> RACSignal<T> where Element == Optional<T> {
+        return RACSignal<T>.createSignal { s -> RACDisposable? in
+            let subscription = self.subscribe(onNext: { v in
+                s.sendNext(v)
+            }, onError: { e in
+                s.sendError(e)
+            }, onCompleted: {
+                s.sendCompleted()
+            })
+            return RXRACDisposable(subscription)
+        }
+    }
+}
+
 public extension PrimitiveSequenceType where Trait == CompletableTrait, Element == Never {
     func asSignal() -> RACSignal<AnyObject> {
         return RACSignal<AnyObject>.createSignal { s -> RACDisposable? in
