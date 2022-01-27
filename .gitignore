@@ -48,6 +48,8 @@ npm-debug.log
 # fastlane
 fastlane/README.md
 
+# VS Code
+.vscode
 
 # SwiftPM
 .DS_Store
