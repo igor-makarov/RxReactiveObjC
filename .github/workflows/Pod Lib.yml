@@ -5,7 +5,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        platform: [ios, watchos, macos]
+        # watchos removed until CocoaPods fix is landed
+        platform: [ios, macos]
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
