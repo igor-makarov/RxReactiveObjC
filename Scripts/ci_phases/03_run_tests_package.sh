@@ -13,6 +13,7 @@ case "$TEST_COMMAND" in
   xc-macos)
     xcodebuild test \
       -scheme RxReactiveObjC \
+      -destination 'platform=macOS' \
     | tee build/log.txt \
     | bundle exec xcpretty
     ;;
