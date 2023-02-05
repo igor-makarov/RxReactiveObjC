@@ -12,7 +12,7 @@ jobs:
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 2.6
+        ruby-version: 2.7
     - run: echo "ImageVersion=$ImageVersion" >> $GITHUB_ENV
     - name: Bundler Cache
       uses: actions/cache@v2
