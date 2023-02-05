@@ -57,6 +57,6 @@ Pod::Spec.new do |s|
     sp.source_files = 'Tests/**/*.swift'
   end
 
-  s.dependency 'RxSwift', '~> 5'
+  s.dependency 'RxSwift', '~> 6'
   s.dependency 'ReactiveObjC', '>=3.1.0'
 end
