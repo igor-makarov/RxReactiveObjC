@@ -12,7 +12,7 @@ abstract_target 'Common' do
   pod 'ReactiveObjC'
   pod 'RxReactiveObjC', path: './', testspecs: ['CoreTests'], inhibit_warnings: false
   target 'RxReactiveObjCSample' do
-    platform :ios, '9.0'
+    platform :ios, '11.0'
     pod 'SwiftLint'
   end
 end
