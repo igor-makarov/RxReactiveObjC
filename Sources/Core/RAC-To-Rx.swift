@@ -10,7 +10,7 @@ public extension Observable where Element: AnyObject {
     static func from(signal: RACSignal<Element>?) -> Observable<Element?> {
         guard let signal = signal else { return .empty() }
         
-        return Observable<Element?>.create { o in
+        return RxSwift.Observable<Element?>.create { o in
             let subscription = signal.subscribeNext({ v in
                 o.onNext(v)
             }, error: { e in
