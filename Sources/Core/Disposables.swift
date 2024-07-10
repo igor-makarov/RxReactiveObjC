@@ -21,3 +21,9 @@ class RXRACDisposable: RACDisposable {
         self._bag = nil
     }
 }
+
+extension Disposable {
+    public func asRACDisposable() -> RACDisposable {
+        RXRACDisposable(self)
+    }
+}
