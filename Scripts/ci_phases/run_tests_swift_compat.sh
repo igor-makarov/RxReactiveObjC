@@ -15,6 +15,6 @@ xcodebuild test \
     -scheme RxReactiveObjCSwiftCompat \
     -sdk iphonesimulator \
     -configuration Debug \
-    -destination 'platform=iOS Simulator,name=iPhone 7,OS=latest' \
+    -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=latest' \
 | tee build/tests_ios.txt \
 | xcpretty
