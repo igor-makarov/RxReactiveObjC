@@ -6,6 +6,6 @@ xcodebuild test \
     -scheme RxReactiveObjCTests \
     -sdk iphonesimulator \
     -configuration Debug \
-    -destination 'platform=iOS Simulator,iPhone 15 Pro,OS=latest' \
+    -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=latest' \
 | tee build/tests_ios.txt \
 | bundle exec xcpretty
