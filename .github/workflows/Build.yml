@@ -19,7 +19,7 @@ jobs:
         ruby-version: 2.7
     - run: echo "ImageVersion=$ImageVersion" >> $GITHUB_ENV
     - name: Bundler Cache
-      uses: actions/cache@v2
+      uses: actions/cache@v4
       with:
         path: vendor/bundle
         key: ${{ runner.os }}-${{ env.ImageVersion }}-gems-${{ hashFiles('**/Gemfile.lock') }}
@@ -30,7 +30,7 @@ jobs:
         bundle config path vendor/bundle
         bundle install --jobs 4 --retry 3
     - name: Pods Cache
-      uses: actions/cache@v2
+      uses: actions/cache@v4
       with:
         path: |
           ~/.cocoapods
