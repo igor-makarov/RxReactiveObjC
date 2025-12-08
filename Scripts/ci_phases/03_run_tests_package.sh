@@ -21,7 +21,7 @@ case "$TEST_COMMAND" in
     xcodebuild test \
       -scheme RxReactiveObjC \
       -sdk iphonesimulator \
-      -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=latest' \
+      -destination 'platform=iOS Simulator,name=iPhone 16 Pro,OS=latest' \
     | tee build/log.txt \
     | bundle exec xcpretty
     ;;
