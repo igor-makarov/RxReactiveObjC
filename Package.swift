@@ -9,8 +9,8 @@ let package = Package(
         .library(name: "RxReactiveObjC", targets: ["RxReactiveObjC"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/ReactiveX/RxSwift", .upToNextMajor(from: "5.0.0")),
-        .package(url: "https://github.com/RxSwiftCommunity/RxDataSources", .upToNextMajor(from: "4.0.0")),
+        .package(url: "https://github.com/ReactiveX/RxSwift", "5.0.0"..<"7.0.0"),
+        .package(url: "https://github.com/RxSwiftCommunity/RxDataSources", "4.0.0"..<"6.0.0"),
         .package(name: "ReactiveObjC",
                  url: "https://github.com/SwiftPM-Packages/ReactiveObjC.swiftpm",
                  from: "3.1.0"),
