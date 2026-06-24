@@ -1,4 +1,4 @@
-// swift-tools-version:5.2
+// swift-tools-version:5.3
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -11,6 +11,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/ReactiveX/RxSwift", "5.0.0"..<"7.0.0"),
         .package(url: "https://github.com/RxSwiftCommunity/RxDataSources", "4.0.0"..<"6.0.0"),
+        .package(url: "https://github.com/RxSwiftCommunity/RxMKMapView.git", from: "6.0.0"),
         .package(name: "ReactiveObjC",
                  url: "https://github.com/SwiftPM-Packages/ReactiveObjC.swiftpm",
                  from: "3.1.0"),
@@ -22,6 +23,7 @@ let package = Package(
                     "RxSwift",
                     .product(name: "RxCocoa", package: "RxSwift"),
                     "RxDataSources",
+                    .product(name: "RxMKMapView", package: "RxMKMapView", condition: .when(platforms: [.iOS])),
                 ],
                 path: "Sources"),
         .testTarget(name: "Tests",
